@@ -1,0 +1,18 @@
+# secretos
+.env
+.env.local
+
+# dependencias
+node_modules/
+
+# outputs pesados y artefactos
+output/
+public/projects/
+projects/*/videos/
+*.log
+
+# cache de remotion
+.remotion/
+
+# sistema
+.DS_Store

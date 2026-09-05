@@ -1,0 +1,118 @@
+{
+  "templateId": "case-study",
+  "format": "9:16",
+  "title": "De la idea al deploy — Portfolio de Lucas",
+  "hook": "¿Necesitás todo en un solo lugar?",
+  "cta": "Escribime",
+  "ctaSub": "@lucas",
+  "brand": {
+    "bg": "#0B0F1A",
+    "primary": "#7C5CFC",
+    "accent": "#5EEAD4",
+    "handle": "@lucas"
+  },
+  "scenes": [
+    {
+      "id": "hook_todo_en_un_lugar",
+      "type": "hook",
+      "durationInSeconds": 3,
+      "text": "¿Necesitás todo en un solo lugar?"
+    },
+    {
+      "id": "un_responsable",
+      "type": "text",
+      "durationInSeconds": 3,
+      "eyebrow": "DE PRINCIPIO A FIN",
+      "text": "Una idea. Un responsable.",
+      "subtext": "Desde el primer boceto hasta el producto funcionando, Lucas se ocupa de todo el proceso.",
+      "caption": "Diseño, desarrollo y deploy sin intermediarios."
+    },
+    {
+      "id": "diseno_que_comunica",
+      "type": "showcase",
+      "durationInSeconds": 4,
+      "eyebrow": "01 · DISEÑO",
+      "text": "Diseño que comunica",
+      "subtext": "Estructura, identidad visual y una experiencia clara para tus usuarios.",
+      "asset": "projects/portfolio/assets/screenshots/shot-1.png",
+      "caption": "Una base visual pensada para convertir."
+    },
+    {
+      "id": "desarrollo_full_stack",
+      "type": "features",
+      "durationInSeconds": 4,
+      "eyebrow": "02 · DESARROLLO",
+      "text": "Desarrollo full-stack",
+      "subtext": "El producto completo, construido de punta a punta.",
+      "items": [
+        {
+          "label": "Interfaz",
+          "value": "React + Next.js"
+        },
+        {
+          "label": "Backend",
+          "value": "Node.js + APIs REST"
+        },
+        {
+          "label": "Integraciones",
+          "value": "Paneles y servicios conectados"
+        }
+      ],
+      "asset": "projects/portfolio/assets/screenshots/shot-2.png",
+      "caption": "Todo lo necesario para que tu producto funcione."
+    },
+    {
+      "id": "animaciones_con_proposito",
+      "type": "showcase",
+      "durationInSeconds": 4,
+      "eyebrow": "03 · EXPERIENCIA",
+      "text": "Animaciones con propósito",
+      "subtext": "Microinteracciones y transiciones premium, sin comprometer el rendimiento.",
+      "asset": "projects/portfolio/assets/screenshots/shot-3.png",
+      "caption": "Movimiento que guía, comunica y mejora la experiencia."
+    },
+    {
+      "id": "deploy_y_listo",
+      "type": "stats",
+      "durationInSeconds": 4,
+      "eyebrow": "04 · PUBLICACIÓN",
+      "text": "Deploy y listo",
+      "subtext": "Tu proyecto sale optimizado para cargar rápido, posicionar mejor y crecer.",
+      "items": [
+        {
+          "label": "Performance",
+          "value": "Rápida"
+        },
+        {
+          "label": "SEO",
+          "value": "Optimizado"
+        },
+        {
+          "label": "Escalabilidad",
+          "value": "Lista"
+        }
+      ],
+      "asset": "projects/portfolio/assets/screenshots/shot-4.png",
+      "caption": "Del entorno de desarrollo a producción, sin vueltas."
+    },
+    {
+      "id": "idea_al_deploy",
+      "type": "text",
+      "durationInSeconds": 3,
+      "eyebrow": "EL DIFERENCIAL",
+      "text": "De la idea al deploy",
+      "subtext": "Sin intermediarios, sin vueltas y con comunicación directa durante todo el desarrollo.",
+      "caption": "Un solo responsable para todo el producto."
+    },
+    {
+      "id": "cta_hablemos",
+      "type": "cta",
+      "durationInSeconds": 4,
+      "eyebrow": "¿TENÉS UN PROYECTO?",
+      "text": "Escribime",
+      "subtext": "Hablemos de tu proyecto",
+      "asset": "projects/portfolio/assets/logo/logo.svg",
+      "caption": "Diseñemos y construyamos algo que haga crecer tu negocio."
+    }
+  ]
+}

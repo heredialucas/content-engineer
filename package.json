@@ -1,0 +1,42 @@
+{
+  "name": "content-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sistema personal de generación de contenido de marketing: videos Reels con Remotion + IA (texto) local.",
+  "scripts": {
+    "generate": "tsx src/cli/index.ts generate",
+    "render": "tsx src/cli/index.ts render",
+    "studio": "remotion studio src/remotion/index.ts",
+    "assets:placeholders": "tsx scripts/make-placeholder-assets.ts",
+    "project:create": "tsx scripts/create-project.ts",
+    "test:render": "tsx scripts/test-render.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.520",
+    "@remotion/cli": "^4.0.520",
+    "@remotion/google-fonts": "^4.0.520",
+    "@remotion/renderer": "^4.0.520",
+    "@remotion/shapes": "^4.0.520",
+    "@remotion/transitions": "^4.0.520",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "remotion": "^4.0.520"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "commander": "^15.0.0",
+    "dotenv": "^17.4.2",
+    "openai": "^7.10.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "zod": "^4.5.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
