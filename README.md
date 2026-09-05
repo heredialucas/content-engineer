@@ -2,6 +2,8 @@
 
 Sistema personal de generación de contenido de marketing: **Reels verticales (MP4) + guion + caption + hashtags**, listos para revisar y publicar en Instagram.
 
+> 📖 **Guía paso a paso de uso:** [`GUIA.md`](./GUIA.md)
+
 - **Video:** [Remotion](https://remotion.dev) — render local, determinista, gratis e ilimitado.
 - **IA (texto):** OpenAI vía provider intercambiable (default `gpt-5.6-luna`). Genera ideas, guiones, storyboards y captions como JSON estricto validado con zod.
 - **Todo local:** sin SaaS intermedios, sin instalaciones globales (pnpm), sin publicación automática.
@@ -77,8 +79,12 @@ pnpm generate portfolio --count 5
 # otro formato
 pnpm generate portfolio -f 1:1     # 9:16 (default) | 1:1 | 16:9
 
+# capturas reales del sitio (puppeteer + Chrome de sistema, apaga el dev server solo)
+pnpm assets:capture portfolio --dev ../lucas-portfolio --pages /es --clean
+pnpm assets:capture portfolio --url https://hlucas.cloud --pages /es
+
 # re-renderizar un contenido desde su storyboard (sin gastar tokens)
-pnpm render portfolio reel-20260904-220729
+pnpm render portfolio reel-20260904-225222
 
 # previsualizar/editar en Remotion Studio
 pnpm studio
@@ -104,10 +110,14 @@ posts/reel-XXX.md          # caption + hashtags + checklist
 pnpm project:create <nombre>
 ```
 
-1. Completá `projects/<nombre>/info.md` — secciones clave: Descripción, Servicios, Tecnologías, Propuesta de valor, Público objetivo, Tono, CTA. El marketing agent usa esto como fuente de verdad.
-2. Poné tus assets reales en `assets/` (screenshots, logos). Mientras tanto:
+1. Completá `projects/<nombre>/info.md` — secciones clave: Descripción, Servicios, Tecnologías, Propuesta de valor, Público objetivo, Tono, CTA, y la sección **`## Marca`** (colores reales, handle de IG, logo): esos valores se aplican **por encima de la IA**, siempre.
+2. Poné tus assets reales en `assets/` (screenshots, logos). Capturas automáticas de un sitio web:
    ```bash
-   pnpm assets:placeholders <nombre> [cantidad]   # genera screenshots placeholder con Remotion
+   pnpm assets:capture <nombre> --dev <ruta-al-sitio> --pages /es --clean
+   ```
+   O placeholders temporales con Remotion:
+   ```bash
+   pnpm assets:placeholders <nombre> [cantidad]   # screenshots placeholder
    ```
 3. `pnpm generate <nombre>`
 

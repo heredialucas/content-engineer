@@ -93,8 +93,9 @@ Reglas de ritmo:
 - Total del video: 20 a 40 segundos. Duración por escena: 2 a 6 segundos.
 - Alternar tipos: no poner dos "showcase" idénticos seguidos sin diferenciar texto.
 - Cada escena tiene caption (subtítulo) salvo el hook que ya es texto grande.
-- assets: usá SOLO rutas exactas de la lista provista. Si no hay asset útil, asset = null.
+- assets: usá SOLO rutas exactas de la lista provista. Toda escena "showcase" DEBE llevar un asset de la lista (nunca null si hay screenshots disponibles). Las demás escenas pueden ser null.
 - brand: colores hex oscuros para bg (ej: #0B0F1A) y primary/accent vibrantes coherentes con el proyecto.
+- Si el mensaje incluye "MARCA OBLIGATORIA", copiá esos valores EXACTOS en brand (colores, handle, logo). No inventes alternativas.
 - Respondé SIEMPRE en JSON que respete el esquema.`;
 }
 
@@ -109,9 +110,11 @@ export function buildStoryboardUser(args: {
     .map((a) => `- ${a.staticPath} (${a.kind})`)
     .join("\n");
 
+  const marca = args.info.sections["marca"];
+
   return `INFORMACIÓN DEL PROYECTO:
 ${args.info.raw}
-
+${marca ? `\nMARCA OBLIGATORIA (usá estos valores EXACTOS en brand):\n${marca}\n` : ""}
 IDEA: ${args.idea.title} — ${args.idea.angle}
 TEMPLATE SUGERIDO: ${args.idea.templateId}
 

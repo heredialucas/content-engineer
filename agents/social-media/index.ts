@@ -77,6 +77,12 @@ ${storyboard.scenes
       `| ${i + 1} | ${s.type} | ${s.durationInSeconds}s | ${(s.text ?? s.cta ?? "—").replace(/\|/g, "\\|")} |`
   )
   .join("\n")}
+
+## Al publicar
+
+- El MP4 sale silencioso: **agregá un audio trending dentro de Instagram** al publicar.
+- Copiá el caption de arriba tal cual y pegalo en IG.
+- Antes de publicar, revisá que los datos y el screenshot del video sean reales y actuales.
 `;
 
   const file = path.join(postsDir, `${contentId}.md`);

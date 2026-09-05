@@ -61,13 +61,17 @@ Estructura esperada de las líneas:
 Reglas:
 - Textos de pantalla: cortos y punzantes. Sin oraciones largas: se leen en 2-3 segundos.
 - Los subtítulos complementan, no repiten el texto en pantalla.
+- El CTA apunta al contacto principal definido en el proyecto (sección Contacto o Marca). Si hay handle de Instagram, ctaSub debe ser ese handle (ej: "@hlucasdev") o la URL del sitio.
 - Respondé SIEMPRE en JSON que respete el esquema.`;
 }
 
 export function buildScriptUser(args: { info: ProjectInfo; idea: Idea }): string {
+  const contacto = args.info.sections["contacto"];
+  const marca = args.info.sections["marca"];
+
   return `INFORMACIÓN DEL PROYECTO:
 ${args.info.raw}
-
+${contacto ? `\nCONTACTO (usalo para el CTA):\n${contacto}\n` : ""}${marca ? `\nMARCA (handle obligatorio):\n${marca}\n` : ""}
 IDEA SELECCIONADA:
 - Título: ${args.idea.title}
 - Ángulo: ${args.idea.angle}
@@ -91,6 +95,7 @@ Estructura del caption:
 
 Reglas:
 - Hashtags: 8 a 14, mezcla amplios y de nicho, siempre con #.
+- Cerrá el caption con el contacto principal del proyecto: si hay handle de Instagram (sección Contacto/Marca), invitalo a escribir por DM a ese handle. Si hay URL del sitio, mencionala también.
 - Sin frases tipo "hecho con IA" ni meta-comentarios.
 - Respondé SIEMPRE en JSON que respete el esquema.`;
 }
@@ -101,9 +106,12 @@ export function buildCaptionUser(args: {
   script: Script;
   storyboard: Storyboard;
 }): string {
+  const contacto = args.info.sections["contacto"];
+  const marca = args.info.sections["marca"];
+
   return `INFORMACIÓN DEL PROYECTO:
 ${args.info.raw}
-
+${contacto ? `\nCONTACTO (incluilo en el CTA del caption):\n${contacto}\n` : ""}${marca ? `\nMARCA (handle):\n${marca}\n` : ""}
 IDEA: ${args.idea.title} — ${args.idea.angle}
 
 GUION DEL VIDEO:

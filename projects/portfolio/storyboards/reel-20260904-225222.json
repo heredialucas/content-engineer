@@ -1,0 +1,106 @@
+{
+  "templateId": "case-study",
+  "format": "9:16",
+  "title": "El módulo que destrabó 6 meses",
+  "hook": "Seis meses trabado. Lo destrabé.",
+  "cta": "Hablemos",
+  "ctaSub": "@hlucasdev",
+  "brand": {
+    "bg": "#0A0A0C",
+    "primary": "#FAFAFA",
+    "accent": "#999D9E",
+    "handle": "@hlucasdev",
+    "logo": "projects/portfolio/assets/logo/logo.svg"
+  },
+  "scenes": [
+    {
+      "id": "hook_desbloqueo",
+      "type": "hook",
+      "durationInSeconds": 3,
+      "text": "Seis meses trabado. Lo destrabé."
+    },
+    {
+      "id": "problema",
+      "type": "text",
+      "durationInSeconds": 3.5,
+      "eyebrow": "EL PROBLEMA",
+      "text": "Un módulo crítico de una fintech",
+      "subtext": "Llevaba más de seis meses sin poder salir a producción.",
+      "caption": "El bloqueo no era solo técnico: frenaba todo el release."
+    },
+    {
+      "id": "cuello_de_botella",
+      "type": "features",
+      "durationInSeconds": 4,
+      "eyebrow": "DIAGNÓSTICO",
+      "text": "Dónde estaba el cuello",
+      "subtext": "Revisé cada parte del flujo para encontrar qué lo frenaba.",
+      "items": [
+        {
+          "label": "Arquitectura",
+          "value": "Revisión completa"
+        },
+        {
+          "label": "Base de datos",
+          "value": "Reestructuración"
+        },
+        {
+          "label": "Flujo de trabajo",
+          "value": "Bloqueos identificados"
+        }
+      ],
+      "caption": "La solución empezó por entender el sistema de punta a punta."
+    },
+    {
+      "id": "ejecucion_end_to_end",
+      "type": "text",
+      "durationInSeconds": 3.5,
+      "eyebrow": "EJECUCIÓN",
+      "text": "De punta a punta",
+      "subtext": "Preparé los deploys en todos los ambientes y ordené el proceso para avanzar sin improvisar.",
+      "caption": "Arquitectura, datos y deploys alineados para llegar a producción."
+    },
+    {
+      "id": "resultado_release",
+      "type": "stats",
+      "durationInSeconds": 4,
+      "eyebrow": "RESULTADO",
+      "text": "Release habilitado",
+      "subtext": "El módulo quedó listo para salir.",
+      "items": [
+        {
+          "label": "Meses destrabados",
+          "value": "6+"
+        },
+        {
+          "label": "Inversionistas clave",
+          "value": "3"
+        },
+        {
+          "label": "Módulo crítico",
+          "value": "Listo"
+        }
+      ],
+      "caption": "Fundswin pudo liberar el producto para tres inversionistas clave."
+    },
+    {
+      "id": "problema_tecnico",
+      "type": "title",
+      "durationInSeconds": 3,
+      "eyebrow": "¿TENÉS ALGO FRENADO?",
+      "text": "De bloqueo técnico a release",
+      "subtext": "Vemos qué está trabando tu producto y cómo llevarlo adelante.",
+      "caption": "Sin humo: diagnóstico claro y ejecución concreta."
+    },
+    {
+      "id": "cta_contacto",
+      "type": "cta",
+      "durationInSeconds": 3,
+      "text": "Hablemos",
+      "subtext": "Escribime por Instagram para hablar de tu proyecto.",
+      "asset": "projects/portfolio/assets/logo/logo.svg",
+      "caption": "@hlucasdev",
+      "cta": "Escribime"
+    }
+  ]
+}

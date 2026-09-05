@@ -9,6 +9,7 @@
     "render": "tsx src/cli/index.ts render",
     "studio": "remotion studio src/remotion/index.ts",
     "assets:placeholders": "tsx scripts/make-placeholder-assets.ts",
+    "assets:capture": "tsx scripts/capture-screenshots.ts",
     "project:create": "tsx scripts/create-project.ts",
     "test:render": "tsx scripts/test-render.ts"
   },
@@ -30,6 +31,7 @@
     "commander": "^15.0.0",
     "dotenv": "^17.4.2",
     "openai": "^7.10.0",
+    "puppeteer-core": "^25.10.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",
     "zod": "^4.5.4"
