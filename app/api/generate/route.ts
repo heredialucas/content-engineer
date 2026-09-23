@@ -85,14 +85,12 @@ export async function POST(request: Request) {
           prompt: promptForImage,
           size,
           quality: process.env.OPENAI_IMAGE_QUALITY === "low" ? "low" : "high",
-          response_format: "b64_json",
         })
       : await client.images.generate({
           model,
           prompt: promptForImage,
           size,
           quality: process.env.OPENAI_IMAGE_QUALITY === "low" ? "low" : "high",
-          response_format: "b64_json",
         });
 
     const raw = generated.data?.[0]?.b64_json;
