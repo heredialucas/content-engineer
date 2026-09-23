@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.13.1",
   "description": "Estudio privado para crear y organizar contenido visual por proyecto.",
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
