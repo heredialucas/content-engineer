@@ -1,0 +1,12 @@
+.git
+.env
+.env.*
+node_modules
+.next
+.remotion
+output
+data
+*.log
+.DS_Store
+projects/*/studio
+projects/*/videos

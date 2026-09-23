@@ -1,0 +1,62 @@
+{
+  "updatedAt": "2026-09-07",
+  "note": "Ángulos/estructuras narrativas probadas para armar la pieza completa (hook → desarrollo → cierre). El composer usa el outline del brief, que se apoya en estos frameworks.",
+  "angles": [
+    {
+      "id": "pas",
+      "name": "Problema → Agitación → Solución",
+      "description": "Nombrá el dolor, hacelo sentir (costo real de no resolverlo) y mostrá la salida.",
+      "flow": ["dolor concreto", "qué te cuesta hoy (plata, tiempo, oportunidades)", "cómo se resuelve + prueba"],
+      "bestFor": ["venta", "educativo"]
+    },
+    {
+      "id": "bab",
+      "name": "Before → After → Bridge",
+      "description": "Estado actual, estado deseado, y el puente concreto que los conecta.",
+      "flow": ["situación actual (con detalle)", "cómo se ve después", "los 2-3 pasos del puente"],
+      "bestFor": ["venta", "proyectos", "proceso"]
+    },
+    {
+      "id": "caso-mini",
+      "name": "Caso mini",
+      "description": "Una historia real condensada: situación → decisión → resultado medible.",
+      "flow": ["contexto en 1 línea", "qué se hizo distinto", "resultado con número", "qué significa para el cliente"],
+      "bestFor": ["proyectos", "venta"]
+    },
+    {
+      "id": "error-leccion",
+      "name": "Error → Lección",
+      "description": "Un error real (propio o del rubro) y la lección aplicable. Genera confianza por honestidad.",
+      "flow": ["el error y su costo", "por qué pasaba", "qué cambiaría hoy"],
+      "bestFor": ["opiniones", "personal", "educativo"]
+    },
+    {
+      "id": "objecion-prueba",
+      "name": "Objeción → Prueba",
+      "description": "Tomá la objeción de compra más común y respondela con evidencia, no con promesas.",
+      "flow": ["la objeción tal cual se dice", "el reencuadre (costo de no actuar)", "prueba real (caso/número)"],
+      "bestFor": ["venta"]
+    },
+    {
+      "id": "proceso-bts",
+      "name": "Proceso detrás de escena",
+      "description": "Mostrá cómo trabajás de verdad: decisiones, criterios, herramientas. Vende proceso, no promesas.",
+      "flow": ["qué se está construyendo", "una decisión y su porqué", "estado/resultado visible"],
+      "bestFor": ["proceso", "educativo"]
+    },
+    {
+      "id": "opinion-defendida",
+      "name": "Opinión defendida",
+      "description": "Un hot take con argumento y prueba. Sin opinión no hay conversación; sin prueba es ruido.",
+      "flow": ["la afirmación fuerte", "el argumento", "el límite (dónde NO aplica)"],
+      "bestFor": ["opiniones"]
+    },
+    {
+      "id": "demostracion",
+      "name": "Demostración (show, don't tell)",
+      "description": "Mostrá el producto/sistema funcionando: screenshot, antes/después, video del uso real.",
+      "flow": ["qué van a ver", "el demo con foco en un detalle", "qué implica para el cliente"],
+      "bestFor": ["proyectos", "venta", "educativo"]
+    }
+  ]
+}

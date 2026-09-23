@@ -1,0 +1,66 @@
+{
+  "id": "carousel-catalogo-especializado-para-running-20260911-181041",
+  "project": "decoatletas",
+  "contentType": "carousel",
+  "platforms": [
+    "instagram",
+    "linkedin"
+  ],
+  "aspect": "1:1",
+  "status": "draft",
+  "slides": [
+    {
+      "index": 1,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-01.png"
+    },
+    {
+      "index": 2,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-02.png"
+    },
+    {
+      "index": 3,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-03.png"
+    },
+    {
+      "index": 4,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-04.png"
+    },
+    {
+      "index": 5,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-05.png"
+    },
+    {
+      "index": 6,
+      "file": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides/slide-06.png"
+    }
+  ],
+  "captions": {
+    "instagram": {
+      "caption": "De accesorios dispersos en marketplaces a una tienda donde el corredor encuentra lo que busca.\n\nEn Deco Atletas, el problema no era solo vender online: había que ordenar un catálogo de más de 20 variantes sin marear al cliente.\n\nSeparamos soportes Garmin, sujetadores dorsales y otros accesorios en categorías claras. Después sumamos selección de variantes, checkout y stock desde un mismo lugar.\n\nLa categorización no fue decoración. También fue parte del producto.\n\nDeco Atletas ya está live: https://www.decoatletas.com/",
+      "hashtags": [
+        "#Ecommerce",
+        "#TiendaOnline",
+        "#DesarrolloWeb",
+        "#NextJS",
+        "#ReactJS",
+        "#RunningArgentina",
+        "#AccesoriosParaCorrer",
+        "#Runners",
+        "#UXEcommerce",
+        "#ConversionRateOptimization",
+        "#Emprendimientos",
+        "#DecoAtletas"
+      ]
+    },
+    "linkedin": {
+      "caption": "Tener los productos publicados no alcanza si el cliente tiene que buscarlos a ciegas.\n\nEn Deco Atletas, los accesorios para corredores estaban repartidos en marketplaces y canales genéricos. El desafío no era solamente armar una tienda: había que ordenar la forma de encontrar el producto correcto.\n\nPor eso estructuré el catálogo en categorías concretas: soportes para Garmin, sujetadores dorsales y otros accesorios. También sumé variantes, stock, checkout y pagos en un mismo recorrido.\n\nEl resultado fue una tienda propia, con más de 20 variantes y una experiencia de compra pensada para un nicho específico.\n\nLa categorización no fue un detalle visual. Fue parte del producto: cuando el catálogo está ordenado, decidir también se vuelve más simple.\n\n¿Tu catálogo se entiende en pocos segundos o todavía depende de que alguien responda un mensaje?",
+      "hashtags": [
+        "#Ecommerce",
+        "#DesarrolloWeb",
+        "#Running",
+        "#NextJS",
+        "#UX"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Content Studio",
+  "short_name": "Content Studio",
+  "description": "Crea contenido para tus proyectos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "es",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-09-07",
+  "note": "Fuentes de referencia para el banco de hooks. `ingest: true` = el comando `pnpm knowledge:refresh` intenta extraer hooks nuevos de esa URL. Las fuentes de redes sociales (IG/TikTok) suelen bloquear scraping: se agregan como referencia manual.",
+  "sources": [
+    {
+      "id": "content-society-hooks",
+      "name": "Content Society — 12 hooks que más convierten en clips virales",
+      "type": "blog",
+      "url": "https://contentsociety.co/blog/hooks-clips-virales-2026",
+      "author": "Adrián García (@AdrianGarme) — Grouthers",
+      "why": "Fórmulas de hook validadas en cuentas hispanas 2026, con variantes por nicho (marketing/agencias incluidas).",
+      "ingest": true
+    },
+    {
+      "id": "el-vinculo-100-hooks",
+      "name": "El Vínculo Digital — Los 100 mejores ganchos para redes 2026",
+      "type": "blog",
+      "url": "https://www.elvinculodigital.com/2026/tutoriales/redes-sociales/los-100-mejores-hooks-ganchos-para-redes-sociales-en-2026-para-videos-y-carruseles/",
+      "author": "Santiago Albarracín",
+      "why": "Banco grande de ganchos en español categorizados (FOMO, valor inmediato, curiosidad, storytelling, tech).",
+      "ingest": true
+    },
+    {
+      "id": "andrea-estratega",
+      "name": "Andrea Estratega — Fórmula de ganchos virales",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=VxBrRu-gOVQ",
+      "author": "Andrea Estratega",
+      "why": "Sistema de ganchos para videos cortos en español; útil para estructuras y contraejemplos.",
+      "ingest": false
+    },
+    {
+      "id": "adrian-saenz",
+      "name": "Adrián Sáenz — La nueva forma de vender en redes",
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=gzg2XIZy-Z4",
+      "author": "Adrián Sáenz",
+      "why": "Viralidad aplicada a venta (no vanity metrics): útil para ángulos de conversión, no solo alcance.",
+      "ingest": false
+    },
+    {
+      "id": "hormozi-frameworks",
+      "name": "Alex Hormozi — value equation y ofertas",
+      "type": "reference",
+      "url": "https://www.linkedin.com/alexfordhormozi/",
+      "author": "Alex Hormozi",
+      "why": "Frameworks de oferta y objeciones (resultado×certeza / tiempo / esfuerzo). En inglés; para ángulos, no para copiar texto.",
+      "ingest": false
+    }
+  ]
+}

@@ -60,12 +60,57 @@ Directo, concreto y profesional pero cercano. Sin humo: lo que se dice, se entre
 
 Escribime por Instagram (@hlucasdev) para hablar de tu proyecto.
 
+## Venta
+
+Qué vendo (oferta concreta):
+- Productos web completos, de punta a punta: e-commerce, plataformas digitales y MVPs con base técnica seria (Next.js + Node + TypeScript).
+- Migraciones y rescates: plataformas legacy que no escalan, módulos trabados, reestructuras de base de datos sin drama.
+- Automatización con AI agents: workflows con spec-driven development (MCP + rules) que aceleran el desarrollo.
+- Deploys y operación: CI/CD, VPS/Docker/AWS, dominios y producción confiable.
+
+Dolor del cliente ideal (antes de contratarme):
+- Su sitio web no genera consultas ni ventas: es una tarjeta digital muerta.
+- Tiene un módulo o feature estancado hace meses que nadie logra destrabar.
+- Su plataforma legacy se cae, no escala o da miedo tocarla.
+- El equipo pierde semanas en procesos manuales que se pueden automatizar.
+- Depende de capas de intermediarios: nadie responde de punta a punta.
+
+Resultado que obtiene el cliente:
+- Un solo responsable técnico de punta a punta, con mentalidad de producto y experiencia como CTO.
+- Entregas rápidas con comunicación directa, sin humo ni intermediarios.
+- Sistemas que escalan de verdad: arquitectura cuidada, deploys confiables.
+- Time-to-market corto: de requisitos a producción.
+
+Objeciones típicas (y la respuesta):
+- "Es caro" → lo caro es NO hacerlo: un sitio que no convierte o un módulo trabado cuesta ventas y meses de retraso.
+- "Ya tengo programador" → complemento al equipo: me traen para desbloquear, migrar o automatizar lo que está frenado.
+- "Primero quiero crecer" → la base técnica que se monta hoy es la que sostiene el crecimiento de mañana.
+
+Prueba social (resultados reales, en una línea cada uno):
+- Fundswin: desbloqueé un módulo crítico estancado más de 6 meses y habilité el release de 3 inversionistas clave.
+- Punto Under / Walvar / Deco Atletas: e-commerces completos operando digital-first.
+- Ikatech: migración de plataforma legacy Python a React + GraphQL con miles de usuarios activos.
+
+Oferta / CTA de venta:
+- Primera conversación sin costo: contás el problema y te digo cómo lo resolvería.
+- Contacto directo: Instagram @hlucasdev o hlucasdev@gmail.com.
+
+## Content mix
+
+- presentacion: 100%
+
+## Presentación
+
+- Título: Portafolio
+- Bajada: Software Engineer · Productos web digitales
+
 ## Marca
 
 - Color de fondo (bg): #0A0A0C
 - Color primario (primary): #FAFAFA
 - Color de acento (accent): #999D9E
+- Nombre: Heredia Lucas
 - Handle de Instagram: @hlucasdev
-- Logo: projects/portfolio/assets/logo/logo.svg
+- Logo: projects/portfolio/assets/logo/logoHL-mark.png
 
 Estos valores son la identidad real de la marca y son OBLIGATORIOS: no inventar ni variar colores, handle ni logo.

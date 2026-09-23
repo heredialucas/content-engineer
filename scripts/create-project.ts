@@ -43,7 +43,7 @@ TODO: ej. directo, profesional, cercano, sin tecnicismos innecesarios.
 TODO: acción que querés que haga el espectador (ej: escribir por WhatsApp, visitar el sitio).
 `;
 
-const SUBDIRS = ["assets", "assets/screenshots", "assets/logo", "scripts", "storyboards", "videos", "posts"];
+const SUBDIRS = ["assets", "assets/screenshots", "assets/logo", "assets/projects", "pieces", "videos", "posts"];
 
 async function main() {
   const name = process.argv[2];

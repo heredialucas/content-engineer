@@ -1,49 +1,75 @@
 import { getTextProvider } from "../../src/ai/registry";
+import type { Platform } from "../../config/config";
 import type { ProjectInfo } from "../../src/project/load-project";
-import type { Idea } from "../marketing/prompts";
-import type { Storyboard } from "../../src/storyboard/types";
 import {
   CaptionSchema,
-  ScriptSchema,
-  buildCaptionSystem,
-  buildCaptionUser,
-  buildScriptSystem,
-  buildScriptUser,
-  captionJsonSchema,
-  scriptJsonSchema,
-  type Script,
+  LinkedInCaptionSchema,
+  LinkedInPostSchema,
+  ThreadSchema,
+  XCaptionSchema,
+  XPostSchema,
+  PLATFORM_JSON,
+  buildPlatformCaptionSystem,
+  buildPlatformCaptionUser,
+  buildTextPostSystem,
+  buildTextPostUser,
+  postJsonFor,
 } from "./prompts";
 
-/** Copywriter: idea → guion (hook + líneas en pantalla + CTA) */
-export async function generateScript(args: {
+/** caption por plataforma para una pieza ya producida */
+export async function generatePlatformCaption(args: {
   info: ProjectInfo;
-  idea: Idea;
-}): Promise<Script> {
+  platform: Platform;
+  hook: string;
+  idea: string;
+  category: string;
+  pieceSummary: string;
+  cta?: string | null;
+  presentation?: boolean;
+}): Promise<{ caption: string; hashtags: string[] }> {
   const provider = getTextProvider();
+  const schema =
+    args.platform === "linkedin"
+      ? LinkedInCaptionSchema
+      : args.platform === "x"
+        ? XCaptionSchema
+        : CaptionSchema;
   return provider.generateJSON({
-    system: buildScriptSystem(),
-    user: buildScriptUser({ info: args.info, idea: args.idea }),
-    schemaName: "copywriter_script",
-    jsonSchema: scriptJsonSchema,
-    zodSchema: ScriptSchema,
-    maxTokens: 2500,
+    system: buildPlatformCaptionSystem(args.platform, args.category, args.presentation),
+    user: buildPlatformCaptionUser(args),
+    schemaName: `caption_${args.platform}`,
+    jsonSchema: PLATFORM_JSON[args.platform],
+    zodSchema: schema,
+    maxTokens: 1800,
   });
 }
 
-/** Copywriter: guion + storyboard → caption + hashtags para la publicación */
-export async function generateCaption(args: {
+/** posts de texto: linkedin-post | x-post | thread */
+export async function generateTextPost(args: {
   info: ProjectInfo;
-  idea: Idea;
-  script: Script;
-  storyboard: Storyboard;
-}) {
+  platform: "linkedin" | "x";
+  variant: "post" | "thread";
+  hook: string;
+  idea: string;
+  category: string;
+  outline?: string | null;
+  presentation?: boolean;
+}): Promise<{ body?: string; tweets?: { text: string }[]; hashtags?: string[] }> {
   const provider = getTextProvider();
-  return provider.generateJSON({
-    system: buildCaptionSystem(),
-    user: buildCaptionUser(args),
-    schemaName: "copywriter_caption",
-    jsonSchema: captionJsonSchema,
-    zodSchema: CaptionSchema,
-    maxTokens: 1200,
+  type PostResult = { body?: string; tweets?: { text: string }[]; hashtags?: string[] };
+  const zodSchema =
+    args.platform === "linkedin"
+      ? LinkedInPostSchema
+      : args.variant === "thread"
+        ? ThreadSchema
+        : XPostSchema;
+  const result = await provider.generateJSON({
+    system: buildTextPostSystem(args.platform, args.variant, args.category, args.presentation),
+    user: buildTextPostUser(args),
+    schemaName: `text_post_${args.platform}_${args.variant}`,
+    jsonSchema: postJsonFor(args.platform, args.variant),
+    zodSchema: zodSchema as unknown as import("zod").ZodType<PostResult>,
+    maxTokens: 2000,
   });
+  return result as PostResult;
 }

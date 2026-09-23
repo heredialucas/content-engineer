@@ -1,0 +1,6 @@
+# Add this site block to the existing Caddy configuration; do not replace
+# other sites or take over ports 80/443 without inspecting the current proxy.
+ads.hlucas.cloud {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3170
+}

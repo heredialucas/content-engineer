@@ -1,0 +1,23 @@
+{
+  "kind": "static",
+  "aspect": "1:1",
+  "layout": "presentation",
+  "brand": {
+    "bg": "#0A0A0C",
+    "primary": "#FAFAFA",
+    "accent": "#999D9E",
+    "name": "Heredia Lucas",
+    "handle": "@hlucasdev",
+    "logo": "projects/decoatletas/assets/logo/logoHL-mark.png"
+  },
+  "category": "presentacion",
+  "blocks": [
+    {
+      "block": "screen",
+      "variant": "framed",
+      "eyebrow": "Deco Atletas",
+      "text": "Tienda online de accesorios para corredores",
+      "asset": "projects/decoatletas/assets/projects/decoAtletasHome.png"
+    }
+  ]
+}

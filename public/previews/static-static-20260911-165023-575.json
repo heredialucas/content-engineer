@@ -1,0 +1,25 @@
+{
+  "spec": {
+    "kind": "static",
+    "aspect": "1:1",
+    "layout": "presentation",
+    "brand": {
+      "bg": "#0A0A0C",
+      "primary": "#FAFAFA",
+      "accent": "#999D9E",
+      "name": "Heredia Lucas",
+      "handle": "@hlucasdev",
+      "logo": "projects/portfolio/assets/logo/logoHL-mark.png"
+    },
+    "category": "presentacion",
+    "blocks": [
+      {
+        "block": "screen",
+        "variant": "framed",
+        "eyebrow": "Portafolio",
+        "text": "Heredia Lucas · Software Engineer",
+        "asset": "projects/portfolio/assets/screenshots/es-desktop-1.png"
+      }
+    ]
+  }
+}

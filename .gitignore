@@ -1,15 +1,21 @@
 # secretos
 .env
 .env.local
+.env.*.local
 
 # dependencias
 node_modules/
 
 # outputs pesados y artefactos
 output/
+.next/
+data/
+projects/*/studio/
+projects/*/assets/uploads/
 public/projects/
 projects/*/videos/
 *.log
+*.tsbuildinfo
 
 # cache de remotion
 .remotion/

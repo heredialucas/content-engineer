@@ -111,16 +111,44 @@ export async function ensurePublicAssets(project: ProjectInfo, needed: string[])
   const byStatic = new Map(project.assets.map((a) => [a.staticPath, a]));
   for (const staticPath of needed) {
     const asset = byStatic.get(staticPath);
-    if (!asset) continue;
+    // assets generados a mitad de pipeline (p.ej. imágenes IA) no figuran en
+    // project.assets: resolverlos directo del disco si existen
+    let src = asset?.absPath;
+    if (!src) {
+      try {
+        await fs.stat(staticPath);
+        src = staticPath;
+      } catch {
+        continue;
+      }
+    }
     const dest = path.join(PUBLIC_DIR, staticPath);
     await fs.mkdir(path.dirname(dest), { recursive: true });
     // solo copiar si cambió (tamaño distinto o no existe)
     try {
-      const stat = await fs.stat(dest);
-      if (stat.size === asset.sizeBytes) continue;
+      const [destStat, srcStat] = await Promise.all([fs.stat(dest), fs.stat(src)]);
+      if (destStat.size === srcStat.size) {
+        await copyToBundle(staticPath, src);
+        continue;
+      }
     } catch {
       /* no existe → copiar */
     }
-    await fs.copyFile(asset.absPath, dest);
+    await fs.copyFile(src, dest);
+    await copyToBundle(staticPath, src);
+  }
+}
+
+/**
+ * Si Remotion ya está empaquetado, copia el archivo dentro del `public/` del
+ * bundle. Sin esto, los assets que aparecen después del primer bundle dan 404
+ * (el bundler copia public/ una sola vez).
+ */
+async function copyToBundle(relPath: string, absSource: string): Promise<void> {
+  try {
+    const { copyIntoBundlePublic } = await import("../render/render-video");
+    await copyIntoBundlePublic(relPath, absSource);
+  } catch {
+    /* mejor esfuerzo: si falla, el archivo queda igualmente en public/ */
   }
 }

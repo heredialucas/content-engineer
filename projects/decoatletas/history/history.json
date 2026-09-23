@@ -1,0 +1,92 @@
+[
+  {
+    "id": "static-20260911-165124-215",
+    "date": "2026-09-11T19:51:32.847Z",
+    "project": "decoatletas",
+    "platforms": [
+      "instagram",
+      "linkedin",
+      "x"
+    ],
+    "contentType": "static",
+    "category": "presentacion",
+    "topic": "Recorrido de compra mobile-first",
+    "hook": "Una tienda linda no alcanza para vender",
+    "hookStructure": "contrarian",
+    "idea": "Presentar Deco Atletas como caso de estudio de una tienda online para corredores. La pieza muestra la pantalla principal y destaca cómo la interfaz ordena el recorrido: encontrar un accesorio, entenderlo desde su ficha y sumarlo al carrito desde el celular.",
+    "files": {
+      "image": "projects/decoatletas/static/static-20260911-165124-215/image.png",
+      "spec": "projects/decoatletas/pieces/static-20260911-165124-215.json",
+      "post": "projects/decoatletas/posts/static-20260911-165124-215.md"
+    },
+    "status": "draft"
+  },
+  {
+    "id": "carousel-catalogo-especializado-para-running-20260911-181041",
+    "date": "2026-09-11T21:11:04.519Z",
+    "project": "decoatletas",
+    "platforms": [
+      "instagram",
+      "linkedin"
+    ],
+    "contentType": "carousel",
+    "category": "proyectos",
+    "topic": "Catálogo especializado para running",
+    "hook": "De accesorios dispersos en marketplaces a un catálogo propio para corredores, sin obligar al atleta a buscar a ciegas",
+    "hookStructure": "antes-despues",
+    "idea": "Mostrar cómo Deco Atletas pasó de tener accesorios para corredores dispersos en marketplaces a contar con un canal propio, organizado por categorías claras como soportes Garmin, sujetadores dorsales y otros accesorios. La pieza explica que la categorización no fue decorativa: ayudó a reducir la fricción para encontrar el producto correcto dentro de un catálogo de más de 20 variantes.",
+    "files": {
+      "slides": "decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/slides",
+      "spec": "projects/decoatletas/pieces/carousel-catalogo-especializado-para-running-20260911-181041.json",
+      "manifest": "projects/decoatletas/carousels/carousel-catalogo-especializado-para-running-20260911-181041/manifest.json",
+      "post": "projects/decoatletas/posts/carousel-catalogo-especializado-para-running-20260911-181041.md"
+    },
+    "status": "approved",
+    "buffer": {
+      "instagram": {
+        "postId": "6aa46f263aade00acad9608c",
+        "status": "scheduled",
+        "dueAt": "2026-09-12T13:00:00.000Z"
+      },
+      "linkedin": {
+        "postId": "6aa46f26997881a67930efc9",
+        "status": "scheduled",
+        "dueAt": "2026-09-12T13:00:00.000Z"
+      }
+    }
+  },
+  {
+    "id": "carousel-tienda-propia-para-ordenar-ventas-20260911-181244",
+    "date": "2026-09-11T21:13:08.150Z",
+    "project": "decoatletas",
+    "platforms": [
+      "instagram",
+      "linkedin"
+    ],
+    "contentType": "carousel",
+    "category": "venta",
+    "topic": "Tienda propia para ordenar ventas",
+    "hook": "El error que cometen las marcas de nicho al vender online — y que les hace perder pedidos",
+    "hookStructure": "error-comun",
+    "idea": "Mostrar cómo una tienda propia puede reemplazar el desorden de vender por WhatsApp, DM o marketplaces: catálogo por categorías, variantes, checkout, pagos y stock centralizados en Deco Atletas.",
+    "files": {
+      "slides": "decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides",
+      "spec": "projects/decoatletas/pieces/carousel-tienda-propia-para-ordenar-ventas-20260911-181244.json",
+      "manifest": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/manifest.json",
+      "post": "projects/decoatletas/posts/carousel-tienda-propia-para-ordenar-ventas-20260911-181244.md"
+    },
+    "status": "approved",
+    "buffer": {
+      "instagram": {
+        "postId": "6aa46f2e2ff05a490696bcc2",
+        "status": "scheduled",
+        "dueAt": "2026-09-12T14:00:00.000Z"
+      },
+      "linkedin": {
+        "postId": "6aa46f2faa296f331c7a9a5c",
+        "status": "scheduled",
+        "dueAt": "2026-09-12T14:00:00.000Z"
+      }
+    }
+  }
+]

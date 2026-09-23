@@ -1,0 +1,58 @@
+[
+  {
+    "id": "static-20260911-165023-575",
+    "date": "2026-09-11T19:50:33.999Z",
+    "project": "portfolio",
+    "platforms": [
+      "instagram",
+      "linkedin",
+      "x"
+    ],
+    "contentType": "static",
+    "category": "presentacion",
+    "topic": "Recorrido visual del portfolio",
+    "hook": "El portfolio también se diseña como producto",
+    "hookStructure": "dato-inesperado",
+    "idea": "Mostrar el portfolio como un producto digital completo: portada, proyectos destacados, stack técnico y adaptación responsive. La pieza se centra en cómo el sitio ordena la información para que el recorrido vaya de la identidad de Lucas a los sistemas que construye.",
+    "files": {
+      "image": "projects/portfolio/static/static-20260911-165023-575/image.png",
+      "spec": "projects/portfolio/pieces/static-20260911-165023-575.json",
+      "post": "projects/portfolio/posts/static-20260911-165023-575.md"
+    },
+    "status": "published",
+    "buffer": {
+      "instagram": {
+        "postId": "6aa46472cb62fc78b502863d",
+        "status": "sent",
+        "dueAt": "2026-09-11T20:28:34.603Z",
+        "metrics": {}
+      },
+      "linkedin": {
+        "postId": "6aa4647ddf564d9b29a4c2c4",
+        "status": "sent",
+        "dueAt": "2026-09-11T20:28:45.242Z",
+        "metrics": {
+          "likes": 0,
+          "comments": 0
+        }
+      },
+      "x": {
+        "postId": "6aa46487b68936ea7a44c530",
+        "status": "sent",
+        "dueAt": "2026-09-11T20:28:55.894Z",
+        "metrics": {
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "views": 0
+        }
+      }
+    },
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "views": 0,
+      "shares": 0
+    }
+  }
+]

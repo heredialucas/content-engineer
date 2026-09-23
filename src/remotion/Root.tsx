@@ -1,223 +1,339 @@
 import React from "react";
-import { AbsoluteFill, Img, staticFile, useVideoConfig, interpolate, useCurrentFrame, spring } from "remotion";
-import { Composition } from "remotion";
-import { FORMATS, FPS, TRANSITION_FRAMES } from "../../config/config";
-import { ContentEngine } from "./ContentEngine";
-import { storyboardDurationFrames } from "../storyboard/duration";import type { Storyboard } from "../storyboard/types";
-import { FONT_DISPLAY, FONT_BODY } from "../../templates/_shared/fonts";
+import {
+  AbsoluteFill,
+  Composition,
+  continueRender,
+  delayRender,
+  interpolate,
+  Img,
+  staticFile,
+  useCurrentFrame,
+} from "remotion";
+import { FORMATS, FPS, STATIC_FORMATS } from "../../config/config";
+import { CarouselPiece, ReelPiece, StaticPiece } from "./Pieces";
+import type { CarouselSpec, PieceSpec, ReelSpec, StaticSpec } from "../specs";
 
-/* ─────────────── storyboard de demostración (render de prueba) ─────────────── */
+/* ─────────────── specs de demostración (Studio / test:render) ─────────────── */
 
-export const DEMO_STORYBOARD: Storyboard = {
-  templateId: "portfolio-showcase",
+const DEMO_BRAND = {
+  bg: "#141516",
+  primary: "#FFFFFF",
+  accent: "#999D9E",
+  handle: "@hlucasdev",
+  logo: "projects/portfolio/assets/logo/logoHL-mark.png",
+};
+
+const DEMO_ASSET = "projects/portfolio/assets/screenshots/es-desktop-1.png";
+
+export const DEMO_REEL_SPEC: ReelSpec = {
+  kind: "reel",
   format: "9:16",
-  title: "Lucas — Full Stack Developer",
-  hook: "Tu portfolio también es un producto",
-  cta: "Ver proyectos",
-  ctaSub: "lucas.dev — desarrollo web full-stack",
-  brand: {
-    bg: "#0B0F1A",
-    primary: "#6366F1",
-    accent: "#22D3EE",
-    handle: "@lucas.dev",
-  },
-  scenes: [
+  brand: DEMO_BRAND,
+  category: "venta",
+  blocks: [
     {
-      id: "hook",
-      type: "hook",
-      durationInSeconds: 3.2,
-      text: "Tu portfolio también es un producto",
-      caption: "Un portfolio que convierte visitas en clientes",
+      block: "hook",
+      variant: "stack",
+      text: "Tu web no convierte",
+      sub: "y el problema no es el tráfico.",
+      caption: "Los 3 errores que matan las consultas",
+      durationInSeconds: 3,
     },
     {
-      id: "title",
-      type: "title",
+      block: "statement",
+      variant: "left",
+      eyebrow: "EL PROBLEMA",
+      text: "Un sitio lindo que no vende es un folleto caro.",
       durationInSeconds: 3.4,
-      eyebrow: "Portfolio 2026",
-      text: "Diseño y construyo productos web completos",
-      subtext: "Next.js · React · Node · TypeScript",
-      caption: "Del diseño al deploy: un solo responsible",
     },
     {
-      id: "shot-1",
-      type: "showcase",
-      durationInSeconds: 4.6,
-      eyebrow: "Interfaz",
-      text: "Landing con animaciones y i18n",
-      asset: "projects/portfolio/assets/screenshots/shot-1.png",
-      caption: "Componentes animados con Framer Motion y GSAP",
+      block: "screen",
+      variant: "browser",
+      eyebrow: "CASO REAL",
+      asset: DEMO_ASSET,
+      caption: "Rediseño con foco en conversión",
+      durationInSeconds: 4,
     },
     {
-      id: "shot-2",
-      type: "showcase",
-      durationInSeconds: 4.2,
-      eyebrow: "Producto real",
-      text: "E-commerce completo: front + back",
-      asset: "projects/portfolio/assets/screenshots/shot-2.png",
-      caption: "React en el front, Node en el back",
-    },
-    {
-      id: "features",
-      type: "features",
-      durationInSeconds: 4.4,
-      eyebrow: "Stack",
-      text: "Tecnologías con las que trabajo",
+      block: "metrics",
+      variant: "grid",
+      eyebrow: "RESULTADO",
       items: [
-        { label: "Next.js 16 + React 19", value: "" },
-        { label: "Node + APIs REST", value: "" },
-        { label: "Tailwind + GSAP", value: "" },
-        { label: "TypeScript end to end", value: "" },
+        { value: "+40%", label: "consultas en 60 días" },
+        { value: "2×", label: "velocidad de carga" },
       ],
-      caption: "Stack moderno, productos que escalan",
+      durationInSeconds: 4,
     },
     {
-      id: "cta",
-      type: "cta",
-      durationInSeconds: 4.4,
-      text: "¿Tenés un proyecto en mente?",
+      block: "cta",
+      variant: "pill",
+      text: "¿Hablamos de tu sitio?",
       cta: "Escribime",
-      subtext: "lucas.dev",
-      caption: "Hablemos de tu próximo producto",
+      durationInSeconds: 4,
     },
   ],
 };
 
-/* ─────────────── composición principal (dinámica) ─────────────── */
+export const DEMO_STATIC_SPEC: StaticSpec = {
+  kind: "static",
+  aspect: "4:5",
+  brand: DEMO_BRAND,
+  category: "opiniones",
+  blocks: [
+    { block: "hook", variant: "serif", eyebrow: "OPINIÓN", text: "El portfolio no es un CV." },
+    {
+      block: "statement",
+      variant: "center",
+      text: "Es tu mejor vendedor",
+      sub: "cuando muestra cómo pensás, no solo qué hiciste.",
+    },
+  ],
+};
+
+export const DEMO_CAROUSEL_SPEC: CarouselSpec = {
+  kind: "carousel",
+  aspect: "4:5",
+  brand: DEMO_BRAND,
+  category: "proyectos",
+  pages: [
+    { blocks: [{ block: "hook", variant: "stack", text: "De Django a React", eyebrow: "CASO" }] },
+    {
+      blocks: [
+        {
+          block: "statement",
+          variant: "left",
+          eyebrow: "EL DESAFÍO",
+          text: "Una plataforma que frenaba el negocio en cada release.",
+        },
+      ],
+    },
+    {
+      blocks: [
+        { block: "screen", variant: "browser", eyebrow: "DESPUÉS", asset: DEMO_ASSET },
+      ],
+    },
+    {
+      blocks: [
+        {
+          block: "metrics",
+          variant: "hero",
+          eyebrow: "RESULTADO",
+          items: [
+            { value: "6", label: "meses destrabados en semanas" },
+            { value: "0", label: "regresiones en producción" },
+          ],
+        },
+      ],
+    },
+    { blocks: [{ block: "cta", variant: "pill", text: "¿Tenés un caso así?", cta: "Escribime" }] },
+  ],
+};
+
+/* ─────────────── composiciones ─────────────── */
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="ContentEngine"
-        component={ContentEngine}
+        id="ReelPiece"
+        component={ReelPiece}
         fps={FPS}
         width={1080}
         height={1920}
-        defaultProps={{ storyboard: DEMO_STORYBOARD }}
+        defaultProps={{ spec: DEMO_REEL_SPEC }}
         calculateMetadata={({ props }) => {
-          const sb = props.storyboard;
-          const dims = FORMATS[sb.format] ?? FORMATS["9:16"];
-          return {
-            width: dims.width,
-            height: dims.height,
-            durationInFrames: storyboardDurationFrames(sb.scenes),
-          };
+          const spec = props.spec;
+          const dims = FORMATS[spec.format] ?? FORMATS["9:16"];
+          const seconds = spec.blocks.reduce((a, b) => a + (b.durationInSeconds ?? 3), 0);
+          return { width: dims.width, height: dims.height, durationInFrames: Math.ceil(seconds * FPS) };
         }}
       />
       <Composition
-        id="PlaceholderScreen"
-        component={PlaceholderScreen}
+        id="StaticPiece"
+        component={StaticPiece}
         fps={FPS}
-        width={1600}
-        height={1000}
-        durationInFrames={FPS}
-        defaultProps={PLACEHOLDER_DEFAULTS}
-        calculateMetadata={({ props }) => ({ width: props.width, height: props.height })}
+        width={1080}
+        height={1350}
+        durationInFrames={120}
+        defaultProps={{ spec: DEMO_STATIC_SPEC }}
+        calculateMetadata={({ props }) => {
+          const dims = STATIC_FORMATS[props.spec.aspect] ?? STATIC_FORMATS["4:5"];
+          return { width: dims.width, height: dims.height };
+        }}
+      />
+      <Composition
+        id="CarouselPiece"
+        component={CarouselPiece}
+        fps={FPS}
+        width={1080}
+        height={1350}
+        durationInFrames={120}
+        defaultProps={{ spec: DEMO_CAROUSEL_SPEC, pageIndex: 0 }}
+        calculateMetadata={({ props }) => {
+          const dims = STATIC_FORMATS[props.spec.aspect] ?? STATIC_FORMATS["4:5"];
+          return { width: dims.width, height: dims.height };
+        }}
+      />
+      <Composition
+        id="PiecePreview"
+        component={PiecePreview}
+        fps={FPS}
+        width={1080}
+        height={1350}
+        durationInFrames={120}
+        defaultProps={PIECE_PREVIEW_DEFAULTS}
+        calculateMetadata={({ props }) => ({
+          width: props.w,
+          height: props.h,
+          durationInFrames: props.kind === "reel" ? 900 : 120,
+        })}
+      />
+      <Composition
+        id="QuickAd"
+        component={QuickAd}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        durationInFrames={240}
+        defaultProps={{ imageDataUrl: "", headline: "Una idea para tu marca", brandName: "" }}
       />
     </>
   );
 };
 
-/* ─────────────── composición auxiliar: screenshots placeholder ─────────────── */
+/* ─────────────── preview de piezas reales (Remotion Studio) ─────────────── */
 
-export type PlaceholderProps = {
-  width: number;
-  height: number;
-  title: string;
-  subtitle: string;
-  colorA: string;
-  colorB: string;
-  seed: number;
+export type PiecePreviewProps = {
+  kind: "static" | "carousel" | "reel";
+  /** id de la pieza (corré `pnpm previews` para sincronizar) */
+  id: string;
+  pageIndex: number;
+  w: number;
+  h: number;
 };
 
-export const PLACEHOLDER_DEFAULTS: PlaceholderProps = {
-  width: 1600,
-  height: 1000,
-  title: "Proyecto",
-  subtitle: "Screenshot de ejemplo",
-  colorA: "#6366F1",
-  colorB: "#22D3EE",
-  seed: 1,
+export const PIECE_PREVIEW_DEFAULTS: PiecePreviewProps = {
+  kind: "static",
+  id: "static-ejemplo",
+  pageIndex: 0,
+  w: 1080,
+  h: 1350,
 };
 
-export const PlaceholderScreen: React.FC<PlaceholderProps> = ({
-  title,
-  subtitle,
-  colorA,
-  colorB,
-  seed,
-}) => {
+export type QuickAdProps = {
+  imageDataUrl: string;
+  headline: string;
+  brandName: string;
+};
+
+/** Clip vertical breve para reutilizar una imagen de campaña como video. */
+export const QuickAd: React.FC<QuickAdProps> = ({ imageDataUrl, headline, brandName }) => {
   const frame = useCurrentFrame();
-  const { fps, height, width } = useVideoConfig();
-  const enter = spring({ frame, fps, config: { damping: 20, stiffness: 110 } });
-
-  const blocks = [
-    { w: 0.62, h: 26 },
-    { w: 0.46, h: 18 },
-    { w: 0.72, h: 18 },
-    { w: 0.3, h: 18 },
-  ];
-
+  const scale = interpolate(frame, [0, 240], [1, 1.1], { extrapolateRight: "clamp" });
+  const opacity = interpolate(frame, [0, 18, 222, 240], [0.4, 1, 1, 0.4], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
   return (
-    <AbsoluteFill
-      style={{
-        background: `linear-gradient(${125 + seed * 40}deg, ${colorA} 0%, ${colorB} 130%)`,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div
+    <AbsoluteFill style={{ backgroundColor: "#071a31", overflow: "hidden" }}>
+      {imageDataUrl ? (
+        <Img
+          src={imageDataUrl}
+          style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${scale})` }}
+        />
+      ) : null}
+      <AbsoluteFill
         style={{
-          width: "78%",
-          borderRadius: 22,
-          background: "rgba(10,12,20,0.82)",
-          border: "1px solid rgba(255,255,255,0.14)",
-          padding: 38,
-          boxShadow: "0 30px 80px rgba(0,0,0,0.4)",
-          opacity: enter,
-          transform: `translateY(${(1 - enter) * 30}px)`,
+          justifyContent: "flex-end",
+          padding: 92,
+          paddingBottom: 180,
+          opacity,
+          background: "linear-gradient(180deg, rgba(7,26,49,0.05) 15%, rgba(7,26,49,0.24) 42%, rgba(7,26,49,0.92) 100%)",
+          color: "white",
+          fontFamily: "Montserrat, Arial, sans-serif",
         }}
       >
-        <div style={{ display: "flex", gap: 9, marginBottom: 26 }}>
-          {["#FF5F57", "#FEBC2E", "#28C840"].map((c) => (
-            <div key={c} style={{ width: 13, height: 13, borderRadius: "50%", background: c }} />
-          ))}
+        {brandName ? (
+          <div style={{ fontSize: 30, fontWeight: 600, marginBottom: 30, letterSpacing: 1 }}>
+            {brandName.toUpperCase()}
+          </div>
+        ) : null}
+        <div style={{ fontSize: 100, fontWeight: 700, lineHeight: 1.04, maxWidth: 900 }}>
+          {headline}
         </div>
         <div
           style={{
-            fontFamily: FONT_DISPLAY,
-            fontWeight: 700,
-            fontSize: width * 0.038,
-            color: "#fff",
-            marginBottom: 8,
+            marginTop: 42,
+            width: 116,
+            height: 8,
+            borderRadius: 8,
+            backgroundColor: "#006bff",
           }}
-        >
-          {title}
-        </div>
-        <div
-          style={{
-            fontFamily: FONT_BODY,
-            fontSize: width * 0.02,
-            color: "rgba(255,255,255,0.6)",
-            marginBottom: 30,
-          }}
-        >
-          {subtitle}
-        </div>
-        {blocks.map((b, i) => (
-          <div
-            key={i}
-            style={{
-              width: `${b.w * 100}%`,
-              height: b.h,
-              borderRadius: 8,
-              marginBottom: 14,
-              background: i === 0 ? `linear-gradient(90deg, ${colorA}, ${colorB})` : "rgba(255,255,255,0.12)",
-              transform: `translateX(${interpolate(enter, [0, 1], [-40 * i, 0])}px)`,
-            }}
-          />
-        ))}
-      </div>
+        />
+      </AbsoluteFill>
     </AbsoluteFill>
   );
+};
+
+const CenterMsg: React.FC<{ text: string }> = ({ text }) => (
+  <AbsoluteFill
+    style={{
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#101014",
+      color: "rgba(255,255,255,0.7)",
+      fontFamily: "Inter, sans-serif",
+      fontSize: 30,
+      textAlign: "center",
+      padding: 60,
+    }}
+  >
+    {text}
+  </AbsoluteFill>
+);
+
+/**
+ * Carga una pieza REAL (spec v4 copiado a public/previews/ por `pnpm previews`)
+ * y la renderiza con el motor nuevo. Cambiá `id` y `kind` en el panel de props.
+ */
+export const PiecePreview: React.FC<PiecePreviewProps> = ({ kind, id, pageIndex }) => {
+  const [data, setData] = React.useState<{ spec: PieceSpec; pageIndex?: number } | null>(null);
+  const [failed, setFailed] = React.useState(false);
+  const [handle] = React.useState(() => delayRender(`preview ${kind}-${id}`));
+
+  React.useEffect(() => {
+    let alive = true;
+    fetch(staticFile(`previews/${kind}-${id}.json`))
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((d) => {
+        if (!alive) return;
+        setData(d);
+        continueRender(handle);
+      })
+      .catch(() => {
+        if (!alive) return;
+        setFailed(true);
+        continueRender(handle);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [kind, id, handle]);
+
+  if (failed) {
+    return (
+      <CenterMsg
+        text={`Sin preview para "${id}".\n\nCorré: pnpm previews\ny volvé a abrir el Studio.`}
+      />
+    );
+  }
+  if (!data) return null;
+  const spec = data.spec;
+  if (spec.kind === "static") return <StaticPiece spec={spec} />;
+  if (spec.kind === "carousel")
+    return <CarouselPiece spec={spec} pageIndex={data.pageIndex ?? pageIndex} />;
+  return <ReelPiece spec={spec} />;
 };

@@ -1,0 +1,157 @@
+{
+  "kind": "carousel",
+  "aspect": "1:1",
+  "brand": {
+    "bg": "#0A0A0C",
+    "primary": "#FAFAFA",
+    "accent": "#999D9E",
+    "name": "Heredia Lucas",
+    "handle": "@hlucasdev",
+    "logo": "projects/decoatletas/assets/logo/logoHL-mark.png"
+  },
+  "category": "venta",
+  "pages": [
+    {
+      "blocks": [
+        {
+          "block": "hook",
+          "variant": "stack",
+          "eyebrow": "VENTA ONLINE",
+          "text": "El error que cometen las marcas de nicho al vender online — y que les hace perder pedidos",
+          "sub": null,
+          "items": null,
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    },
+    {
+      "blocks": [
+        {
+          "block": "statement",
+          "variant": "left",
+          "eyebrow": "EL DESORDEN",
+          "text": "Pedidos por WhatsApp. Variantes por DM. Stock en una planilla.",
+          "sub": "Cada canal suma consultas, cruces y oportunidades perdidas.",
+          "items": null,
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    },
+    {
+      "blocks": [
+        {
+          "block": "steps",
+          "variant": "rows",
+          "eyebrow": "CUANDO NADA ESTÁ CENTRALIZADO",
+          "text": "La operación se vuelve manual",
+          "sub": null,
+          "items": [
+            {
+              "label": "Catálogo",
+              "value": "disperso"
+            },
+            {
+              "label": "Variantes",
+              "value": "difíciles de seguir"
+            },
+            {
+              "label": "Pagos",
+              "value": "por confirmar"
+            },
+            {
+              "label": "Stock",
+              "value": "desactualizado"
+            }
+          ],
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    },
+    {
+      "blocks": [
+        {
+          "block": "statement",
+          "variant": "center",
+          "eyebrow": "LA DECISIÓN",
+          "text": "Una tienda propia ordena todo el recorrido",
+          "sub": "Categorías claras, checkout, pagos y stock en un solo lugar.",
+          "items": null,
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    },
+    {
+      "blocks": [
+        {
+          "block": "screen",
+          "variant": "browser",
+          "eyebrow": "DECO ATLETAS",
+          "text": "Una tienda enfocada en accesorios para corredores",
+          "sub": "Más de 5 líneas de producto y más de 20 variantes, listas para vender.",
+          "items": null,
+          "asset": "projects/decoatletas/assets/projects/decoAtletasHome.png",
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        },
+        {
+          "block": "metrics",
+          "variant": "grid",
+          "eyebrow": "OPERACIÓN DIGITAL-FIRST",
+          "text": null,
+          "sub": null,
+          "items": [
+            {
+              "label": "Líneas de producto",
+              "value": "5+"
+            },
+            {
+              "label": "Variantes",
+              "value": "20+"
+            },
+            {
+              "label": "Estado",
+              "value": "Live"
+            },
+            {
+              "label": "Tracking",
+              "value": "Meta Pixel"
+            }
+          ],
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    },
+    {
+      "blocks": [
+        {
+          "block": "cta",
+          "variant": "minimal",
+          "eyebrow": "¿TU TIENDA RECIBE VISITAS, PERO NO CONVIERTE?",
+          "text": "Ordenemos el recorrido de compra.",
+          "sub": "Escribime por Instagram y vemos cómo resolverlo.",
+          "items": null,
+          "asset": null,
+          "cta": null,
+          "caption": null,
+          "durationInSeconds": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "carousel-tienda-propia-para-ordenar-ventas-20260911-181244",
+  "project": "decoatletas",
+  "contentType": "carousel",
+  "platforms": [
+    "instagram",
+    "linkedin"
+  ],
+  "aspect": "1:1",
+  "status": "draft",
+  "slides": [
+    {
+      "index": 1,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-01.png"
+    },
+    {
+      "index": 2,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-02.png"
+    },
+    {
+      "index": 3,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-03.png"
+    },
+    {
+      "index": 4,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-04.png"
+    },
+    {
+      "index": 5,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-05.png"
+    },
+    {
+      "index": 6,
+      "file": "projects/decoatletas/carousels/carousel-tienda-propia-para-ordenar-ventas-20260911-181244/slides/slide-06.png"
+    }
+  ],
+  "captions": {
+    "instagram": {
+      "caption": "Vender por WhatsApp y DM parece práctico, hasta que se pierde un pedido por una variante o el stock queda desactualizado.\n\nEn Deco Atletas, el problema no era mostrar más productos: era ordenar el recorrido de compra.\n\nLa tienda centraliza 5+ líneas, 20+ variantes, pagos, stock y tracking con Meta Pixel. La marca dejó de depender de conversaciones dispersas y empezó a operar digital-first.\n\nUna tienda propia no reemplaza tu atención: evita que tu operación dependa de ella.\n\n¿Tu web vende o solo muestra? Escribime por DM en @hlucasdev.",
+      "hashtags": [
+        "#Ecommerce",
+        "#TiendaOnline",
+        "#ComercioElectronico",
+        "#DesarrolloWeb",
+        "#NextJS",
+        "#ReactJS",
+        "#Emprendedores",
+        "#MarcasDeportivas",
+        "#RunningArgentina",
+        "#AccesoriosParaCorredores",
+        "#ConversionDigital",
+        "#MarketingDigital"
+      ]
+    },
+    "linkedin": {
+      "caption": "El error que cometen muchas marcas de nicho al vender online no está en el producto.\n\nEstá en repartir la operación entre WhatsApp, mensajes directos, marketplaces y una planilla de stock.\n\nAhí empiezan los pedidos que se pierden, las variantes difíciles de seguir y los pagos que quedan “por confirmar”. El costo no siempre aparece como un problema técnico: aparece en horas de seguimiento, respuestas duplicadas y ventas que nunca se concretan.\n\nCon Deco Atletas ordenamos todo el recorrido en una tienda propia para accesorios de running: catálogo por categorías, selección de variantes, checkout con pagos integrados y stock centralizado.\n\nEl resultado fue una operación digital-first, con más de 5 líneas de producto, 20+ variantes y seguimiento de conversiones con Meta Pixel.\n\nUna tienda no debería ser solo una vidriera. Tiene que ayudar a que el pedido avance, se cobre y quede registrado.\n\n#Ecommerce #DesarrolloWeb #TiendasOnline #Running #Conversion",
+      "hashtags": [
+        "#Ecommerce",
+        "#DesarrolloWeb",
+        "#TiendasOnline",
+        "#Running",
+        "#Conversion"
+      ]
+    }
+  }
+}

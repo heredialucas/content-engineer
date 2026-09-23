@@ -1,0 +1,160 @@
+{
+  "spec": {
+    "kind": "carousel",
+    "aspect": "1:1",
+    "brand": {
+      "bg": "#0A0A0C",
+      "primary": "#FAFAFA",
+      "accent": "#999D9E",
+      "name": "Heredia Lucas",
+      "handle": "@hlucasdev",
+      "logo": "projects/decoatletas/assets/logo/logoHL-mark.png"
+    },
+    "category": "proyectos",
+    "pages": [
+      {
+        "blocks": [
+          {
+            "block": "hook",
+            "variant": "stack",
+            "eyebrow": "DECO ATLETAS",
+            "text": "De accesorios dispersos en marketplaces a un catálogo propio para corredores, sin obligar al atleta a buscar a ciegas",
+            "sub": null,
+            "items": null,
+            "asset": null,
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "block": "statement",
+            "variant": "left",
+            "eyebrow": "EL PROBLEMA",
+            "text": "El equipamiento estaba repartido en canales genéricos.",
+            "sub": "Encontrar el accesorio correcto dependía demasiado de buscar a ciegas.",
+            "items": null,
+            "asset": null,
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "block": "screen",
+            "variant": "browser",
+            "eyebrow": "DESDE 2025",
+            "text": "Una tienda propia para comprar accesorios de running.",
+            "sub": "Catálogo, variantes y checkout dentro del mismo recorrido.",
+            "items": null,
+            "asset": "projects/decoatletas/assets/projects/decoAtletasHome.png",
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "block": "metrics",
+            "variant": "grid",
+            "eyebrow": "CATÁLOGO LIVE",
+            "text": null,
+            "sub": null,
+            "items": [
+              {
+                "label": "Líneas de producto",
+                "value": "5+"
+              },
+              {
+                "label": "Variantes",
+                "value": "20+"
+              },
+              {
+                "label": "Estado",
+                "value": "Live"
+              },
+              {
+                "label": "Año",
+                "value": "2025"
+              }
+            ],
+            "asset": null,
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "block": "steps",
+            "variant": "numbered",
+            "eyebrow": "LA DECISIÓN TÉCNICA",
+            "text": "Ordenar la búsqueda también era parte del producto.",
+            "sub": null,
+            "items": [
+              {
+                "label": "Soportes Garmin",
+                "value": null
+              },
+              {
+                "label": "Sujetadores dorsales",
+                "value": null
+              },
+              {
+                "label": "Otros accesorios",
+                "value": null
+              },
+              {
+                "label": "Selección y checkout",
+                "value": null
+              }
+            ],
+            "asset": null,
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "block": "quote",
+            "variant": null,
+            "eyebrow": "APRENDIZAJE",
+            "text": "Cuando el catálogo tiene un nicho concreto, ordenar la decisión de compra también es parte del producto.",
+            "sub": "Deco Atletas · e-commerce especializado para corredores",
+            "items": null,
+            "asset": null,
+            "cta": null,
+            "caption": null,
+            "durationInSeconds": null
+          },
+          {
+            "block": "cta",
+            "variant": "minimal",
+            "eyebrow": null,
+            "text": "¿Tu catálogo también se pierde entre mensajes y marketplaces?",
+            "sub": "Escribime y vemos cómo ordenarlo.",
+            "items": null,
+            "asset": null,
+            "cta": "Hablemos",
+            "caption": null,
+            "durationInSeconds": null
+          }
+        ]
+      }
+    ]
+  },
+  "pageIndex": 0
+}
