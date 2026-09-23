@@ -23,7 +23,6 @@ Read the relevant source files and this guide before changing application behavi
 7. Keep the UI responsive and follow `DESIGN.md`. Include keyboard focus, errors, loading, empty and success states.
 8. Do not add public registration, multi-tenant billing, a database, publishing automation, or Meta Ads writes without a separate requirement.
 9. Before removing code, prove it has no live imports, scripts, project references or documented use. Preserve users' generated content.
-10. Never connect to the production VPS as root with a password. Deploy only through the provisioned non-root SSH key and inspect existing proxy/container services before changing them.
 
 ## Commands
 
